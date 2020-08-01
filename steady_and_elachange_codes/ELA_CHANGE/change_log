@@ -1,0 +1,7 @@
+this is a copy of ../1
+implementing linear ela change;tuning and steady run removed from submit.sh
+transient run for 1000 yr
+new macro/constant ela_rate defined at globals.h
+new global double ela_change declared at globals.h
+ela_change is updated within flow.cpp every iteration (#l171 50*sin(2 pi t/200))
+fll_mb is using this ela_change
