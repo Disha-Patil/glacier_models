@@ -63,28 +63,28 @@ for t in ela_arr:
         with open('steady_slope') as s: slope, af, tau = [[float(j[0]), float(j[1]), float(j[2])] for j in [k.split() for k in s.readlines()]][0]
         if(first):
             first = 0
-            if(slope<=0.000001): case = 1
-            elif(slope>0.000001): case = 2
+            if(slope<=0.0001): case = 1
+            elif(slope>0.0001): case = 2
             else: case = 3
 
         
         # ELA TOO HIGH
         if(case==1): 
-            if(slope < 0.000001):
+            if(slope < 0.0001):
                 high = low
                 low -= 100
                 guess_ela = low
-            if(slope > 0.000001):
+            if(slope > 0.0001):
                 print("    %f    %f"%(low,high)) 
                 break
 
         # ELA TOO LOW
         if(case==2):
-            if(slope > 0.000001):
+            if(slope > 0.0001):
                 low = high 
                 high += 100
                 guess_ela = high
-            if(slope < 0.000001):
+            if(slope < 0.0001):
                 print("    %f    %f"%(low,high))
                 break
 
@@ -101,7 +101,7 @@ for t in ela_arr:
         trm("awk '{if($3>0){print $1,$2,%f}else{print $1,$2,0}}' bed.txt > ela.txt "%(ela))
         trm("./tune")
         with open('steady_slope') as s: slope, af, tau = [[float(j[0]), float(j[1]), float(j[2])] for j in [k.split() for k in s.readlines()]][0]
-        if(slope >= 0.000001): low = ela
+        if(slope >= 0.0001): low = ela
         else: high = ela
     ela = high
 

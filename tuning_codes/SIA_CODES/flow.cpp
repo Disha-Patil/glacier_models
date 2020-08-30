@@ -232,7 +232,6 @@ int main(){
 		
 		fill_d(d,h,bed,m,neigh1,neigh2,neigh3,neigh4); 						// update diffusion
 		
-		
 		fill_b( b,flux, d,mb,m, bed, h, DT, DT_inv_2_dx_dx, domain);               	// update b vector
 		
 		fill_A( A,d,m,m_idx, DT_inv_2_dx_dx, domain);                          		// update A matrix
@@ -243,7 +242,7 @@ int main(){
 		//std::cout << "#iterations:     " << cg.iterations() << std::endl;
 
 		p = 0;                                    								// counter for accessing the solution vector (x) values 
-
+	
 
 		// fill h matrix
 		for(int ij=0;ij<n0;ij++){
@@ -309,9 +308,9 @@ int main(){
 			areaf_arr[0] = areaf_arr[1];
 			areaf_arr[1] = areaf;
 
-			steady_slope = (totalice-prev_totalice)/(totalice*200);
+			steady_slope = (totalice-prev_totalice)/(inst_area*200);
 
-			if(areaf_arr[0]==areaf_arr[1] && steady_slope > 0.001){
+			if(areaf_arr[0]==areaf_arr[1] && steady_slope > .8){
 				tau = t;
 				output_slope(1.0,areaf,tau);
 				cout << "TOO MUCH ICE" << endl;
@@ -319,7 +318,7 @@ int main(){
 
 			}
 
-			if(areaf_arr[0]==areaf_arr[1] && steady_slope < 0.000001){
+			if(areaf_arr[0]==areaf_arr[1] && steady_slope < 0.0001){
 			tau = t;
 			output_slope(steady_slope,areaf,tau);
 			cout << "break after steady condition" << endl;
