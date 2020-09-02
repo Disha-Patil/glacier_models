@@ -71,6 +71,8 @@ void fill_mb(MatrixXd& mb, MatrixXd& bed, MatrixXd& ela, MatrixXd& debris, Matri
 	  pabs = abs ( ((Ra1)*(Ra1)) - R2 );
 	  q = ((Ra1)*(Ra1)) - R2;
 	  mb(i,j) = (a0 * (pabs/q) * (sqrt(pabs)/(Ra1)));*/
+	  //printf("THIS IS ELA CHANGE \n");
+	  //printf("%d \n",ela_change);
 
 	  q = mbgrad*(bed(i,j)+h(i,j) - (ela(i,j)+ela_change));  // calculate mass balance with ice thickness feedback
 	  mb(i,j)=q;

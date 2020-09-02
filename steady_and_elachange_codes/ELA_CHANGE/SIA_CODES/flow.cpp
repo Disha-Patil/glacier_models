@@ -168,7 +168,7 @@ int main(){
 
 		
 		                             								// print current iteration 
-                ela_change=0.1*t;//(50.0*sin(.0314159*t)+0.2*t);
+        ela_change=50;//0.1*t;//(50.0*sin(.0314159*t)+0.2*t);
 		fill_mb(mb,bed,ela, debris, h, domain);                         						// update mass balance
 
 		fill_d(d,h,bed,m,neigh1,neigh2,neigh3,neigh4, domain); 						// update diffusion
