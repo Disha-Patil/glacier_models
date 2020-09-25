@@ -47,6 +47,10 @@ python steady.py
 Argha Banerjee, Disha Patil, Ajinkya Jadhav, Deepak Suryavanshi
 
 
+### DOI 
+DOI: 10.5281/zenodo.4050370
+https://doi.org/10.5281/zenodo.4050370
+
 ##### note: please check the eigen3 library path on your computer. if needed make changes to MakeFile.
 
 
