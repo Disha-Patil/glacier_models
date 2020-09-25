@@ -44,7 +44,7 @@ python steady.py
 
 
 ### Code Contribution:
-Argha Banerjee, Disha Patil, Ajinkya Jadhav, Deepak 
+Argha Banerjee, Disha Patil, Ajinkya Jadhav, Deepak Suryavanshi
 
 
 ##### note: please check the eigen3 library path on your computer. if needed make changes to MakeFile.
