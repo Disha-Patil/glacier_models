@@ -1,6 +1,6 @@
 # Bias-in-scaling-based-glacier-estimates
 
-## Folder structure:
+### Folder structure:
 1. Steady Glaciers
 
    Code to get the steady state glacier
@@ -38,10 +38,15 @@ python steady.py
 
      output file (Volumen Area files) of ela change code are stored here
 
-## File headers
+### File headers
 1. tau.txt headers : glacier ID, tau, ela, beta, C
 2. guess_ela.txt : glacier ID, ela, beta, C
 
-#### note: please check the eigen3 library path on your computer. if needed make changes to MakeFile.
+
+### Code Contribution:
+Argha Banerjee, Disha Patil, Ajinkya Jadhav, Deepak 
+
+
+##### note: please check the eigen3 library path on your computer. if needed make changes to MakeFile.
 
 
