@@ -44,7 +44,7 @@ python steady.py
 
 
 ### Code Contribution:
-Argha Banerjee, Disha Patil, Ajinkya Jadhav, Deepak Suryavanshi
+ Ajinkya Jadhav, Disha Patil, Deepak Suryavanshi, Argha Banerjee
 
 
 ### DOI 
