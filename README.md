@@ -18,7 +18,7 @@ python tune.py
 
   2. ELA_CHANGE
 
-     Run the code for linear ELA change
+     Run the code for step change ELA 
 
 ```python
 python change_ela.py
